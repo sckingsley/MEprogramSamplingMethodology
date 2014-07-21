@@ -1,0 +1,17 @@
+{
+    "contents" : "library(gtools)\nestimate = function (a, d) { -log(d/2) / (2*a^2) }\nsig = function (a, n) { pbinom(floor(n*0.5)-floor(n*a), size=floor(n), prob=0.5)}\nbinomsize = function (a,d) {\n  r=c(1,2*estimate(a,d))\n  v=binsearch(function(n) {sig(a,n)-d}, range=r, lower=min(r), upper=max(r))\n  v$where[[length(v$where)]]}\n\nhelp(gtools)\n",
+    "created" : 1405887183763.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2245442507",
+    "id" : "98B8CF17",
+    "lastKnownWriteTime" : 1405952919,
+    "path" : "~/GitHub/MEprogramSamplingMethodology/MEsamplingmethod/estimatetest1.R",
+    "project_path" : "estimatetest1.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}
